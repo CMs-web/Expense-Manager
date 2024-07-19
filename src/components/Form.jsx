@@ -9,7 +9,6 @@ const Form = () => {
   const [amount, setAmount] = useState("");
 
   useEffect(() => {
-     console.log(editTitle);
     setTitle(editTitle);
     setAmount(editAmount);
   }, [handleSubmit]);
