@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 
-const TransactionItem = ({ transaction, handleDelete, handleEdit}) => {
-
+const TransactionItem = ({ transaction, handleDelete, handleEdit }) => {
   return (
-  <li
+    <li
       className={
         transaction.amount > 0
           ? "list-group-item rounded-0 bg-success text-light listitem"
@@ -13,14 +12,20 @@ const TransactionItem = ({ transaction, handleDelete, handleEdit}) => {
       <h4>{transaction.text}</h4>
       <h2>{transaction.amount}</h2>
 
-      <button className="btn btn-outline-light btn-sm rounded-0 float-end" onClick={()=>handleDelete(transaction.id)}>
+      <button
+        className="btn btn-outline-light btn-sm rounded-0 float-end"
+        onClick={() => handleDelete(transaction.id)}
+      >
         Delete
       </button>
-      <button className="btn btn-outline-light btn-sm rounded-0 float-end"onClick={()=>handleEdit(transaction)}>
+      <button
+        className="btn btn-outline-light btn-sm rounded-0 float-end"
+        onClick={() => handleEdit(transaction)}
+      >
         Edit
       </button>
     </li>
-    );
+  );
 };
 
 export default TransactionItem;

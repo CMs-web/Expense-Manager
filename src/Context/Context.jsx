@@ -49,7 +49,21 @@ import React, { createContext, useState } from "react";
   };
 
   return (
-    <HookDemo.Provider value={{ transactions , setTransactions, editAmount, editTitle, curTrans, btnDone, handleSubmit, sort, setSort }}>
+    <HookDemo.Provider
+      value={{
+        transactions,
+        setTransactions,
+        editAmount,
+        editTitle,
+        curTrans,
+        btnDone,
+        handleSubmit,
+        sort,
+        setSort,
+        handleEdit,
+        handleDelete,
+      }}
+    >
       {children}
     </HookDemo.Provider>
   );
